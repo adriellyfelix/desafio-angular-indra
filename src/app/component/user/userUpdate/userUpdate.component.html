@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="mb-2">
+        <h3>Alterar usuário</h3>
+        <form>
+            <div class="form-group">
+              <label for="email">Email </label>
+              <input type="email" class="form-control" id="email" placeholder="Email"
+              [(ngModel)]="user.email"
+               name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="login">Login </label>
+                <input type="login" class="form-control" id="login" placeholder="Login"
+                [(ngModel)]="user.login" name="login">
+              </div>
+
+            <div class="form-group">
+                <label for="nome">Nome </label>
+                <input type="nome" class="form-control" id="nome" placeholder="Nome"
+                [(ngModel)]="user.nome" name="nome">
+              </div>
+
+            <div class="form-group">
+              <label for="senha">Senha</label>
+              <input type="senha" class="form-control" id="senha" placeholder="Senha"
+              [(ngModel)]="user.senha" name="senha">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="userUpdate()" >Atualizar usuário</button>
+            <button type="button" class="btn btn-secondary" (click)="cancel()" >Cancelar</button>
+        </form>
+
+</div>

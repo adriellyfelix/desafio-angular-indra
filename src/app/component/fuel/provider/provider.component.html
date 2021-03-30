@@ -1,0 +1,30 @@
+<div class="container">
+
+  <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Sigla da Região</th>
+        <th scope="col">Município</th>
+        <th scope="col">Revendedora</th>
+        <th scope="col">Produto</th>
+        <th scope="col">Data da Coleta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let provider of providers | paginate: { itemsPerPage: 7, currentPage: actualPage }; let i = index">
+        <td>{{provider.id}}</td>
+        <td>{{provider.siglaEstado}}</td>
+        <td>{{provider.siglaRegiao}}</td>
+        <td>{{provider.municipio}}</td>
+        <td>{{provider.revendedora}}</td>
+        <td>{{provider.produto}}</td>
+        <td>{{provider.dataColeta | date:"dd/MM/yy"}}</td>
+      </tr>
+    </tbody>
+    <pagination-controls (pageChange)="actualPage = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+
+  </table>
+</div>
+

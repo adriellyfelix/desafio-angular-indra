@@ -1,0 +1,43 @@
+.container {
+  width: 50%;
+  padding-top: 3%;
+  text-align: start;
+  border: 8px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 80%;
+  margin-top: 10px;
+  background-position: right;
+}
+
+h3 {
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.historico {
+  color: black;
+  font-size: 40px;
+}
+
+.btn {
+  margin-right: 3%;
+}
+
+.buttons {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 65px;
+}
+
+.form-group {
+  font-weight: bold;
+  color: #f7fff7;
+}
+.form-control {
+  height: auto;
+  margin-top: 30px;
+  max-width: 55%;
+}

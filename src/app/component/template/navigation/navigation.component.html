@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active" >Desafio Angular Indra</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse bg-dropdown" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <div class="dropdown">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Usuário
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="color dropdown-item" [routerLink]="['/']" >Cadastrar usuário</a></li>
+              <li><a class="color dropdown-item" [routerLink]="['/users']"> Lista de usuários</a></li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Histórico
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" [routerLink]="['/historicCreate']">Cadastrar histórico</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/historic']"> Lista de histórico</a></li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Combustível
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" [routerLink]="['/provider']">Listar Distribuidoras</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/abbreviation']">Listar por Região</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/average-flag']">Valor por Bandeiras</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/average-country']">Valores por Municípios</a></li>
+            </ul>
+          </div>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>

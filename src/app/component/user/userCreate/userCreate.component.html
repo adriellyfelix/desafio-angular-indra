@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="mb-2">
+    <h3 class = "cadastro">Cadastro de usuário</h3>
+      <form>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="user.email" name="email">
+            <label for="floatingInput">Informe aqui seu email</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="nome" class="form-control" id="floatingInput" placeholder="Seu nome" [(ngModel)]="user.nome" name="nome">
+            <label for="floatingInput">Digite seu nome</label>
+            </div>
+
+          <div class="form-floating mb-3">
+            <input type="login" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="user.login" name="login">
+            <label for="floatingInput">Cadastre seu login</label>
+            </div>
+
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="user.senha" name="senha">
+            <label for="floatingInput">Cadastre uma senha de acesso</label>
+          </div>
+
+          <div class="buttons">
+          <button type="button" class="btn btn-primary" (click)="createUser()">Salvar usuário</button>
+          <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+        </div>
+      </form>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="form-floating mb-3 form">
+    <input type="text" class="form-control" id="floatingInput" placeholder="Digite aqui a sigla que deseja buscar:" [(ngModel)]="parameter" name="parameter">
+    <label for="floatingInput">Digite aqui a sigla que deseja buscar:</label>
+  </div>
+  <button type="button" class="btn btn-secondary btn-listar" (click)="listar()">Listar</button>
+  <table class="table table-success table-striped">
+    <thead>
+       <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Região</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Município</th>
+          <th scope="col">Protudo</th>
+          <th scope="col">Data</th>
+          <th scope="col">Valor Compra</th>
+          <th scope="col">Valor Venda</th>
+          <th scope="col">Unid. Medida</th>
+       </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let abbreviation of abbreviations | paginate: { itemsPerPage: 7, currentPage: actualPage }; let i = index">
+          <th>{{abbreviation.id}}</th>
+          <th>{{abbreviation.siglaRegiao}}</th>
+          <td>{{abbreviation.siglaEstado}}</td>
+          <td>{{abbreviation.municipio}}</td>
+          <td>{{abbreviation.produto}}</td>
+          <td>{{abbreviation.data}}</td>
+          <td>{{abbreviation.valorCompra | currency:'BRL'}}</td>
+          <td>{{abbreviation.valorVenda | currency:'BRL'}}</td>
+          <td>{{abbreviation.unidadeMedida}}</td>
+       </tr>
+    </tbody>
+    <pagination-controls (pageChange)="actualPage = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+  </table>
+</div>
+

@@ -1,0 +1,10 @@
+.bg-navigation {
+  background-color: #81c7ab;
+  height: 80px;
+  font-weight: bold;
+}
+
+.bg-dropdown {
+  display: flex;
+  justify-content: space-between;
+}

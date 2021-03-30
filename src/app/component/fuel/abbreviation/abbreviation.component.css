@@ -1,0 +1,21 @@
+.container {
+  padding-top: 5%;
+}
+
+.form {
+  width: 80%;
+}
+
+.form-control {
+  height: auto;
+  margin-top: 30px;
+  max-width: 50%;
+}
+
+.table-data {
+  margin-top: "20px";
+}
+
+.btn-listar {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+
+  <h3 class = "historico">Histórico de abastecimento</h3>
+
+    <div class="mb-2">
+        <form>
+          <div class="form-floating mb-3">
+            <input type="combustivel" class="form-control" id="floatingInput" placeholder="combustivel" [(ngModel)]="historic.combustivel" name="combustivel" >
+            <label for="floatingInput">Tipo do combustivel:</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="data" class="form-control" id="floatingInput" placeholder="data" [(ngModel)]="historic.data" name="data">
+            <label for="floatingInput">Data do abastecimento:</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="preco" class="form-control" id="floatingInput" placeholder="preco" [(ngModel)]="historic.preco" name="preco">
+            <label for="floatingInput">Preencha o valor gasto:</label>
+          </div>
+
+            <div class=" buttons">
+              <button type="button" class="btn btn-primary" (click)="historicCreate()">Salvar histórico</button>
+              <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+            </div>
+
+        </form>
+  </div>
